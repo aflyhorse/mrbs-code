@@ -22,7 +22,7 @@ class FieldTimeWithUnits extends FieldDiv
     parent::__construct();
 
     // Convert the raw seconds into as large a unit as possible
-    $duration = $seconds;
+    $duration = intval($seconds);
     toTimeString($duration, $units);
 
     // The checkbox, which enables or disables the field
